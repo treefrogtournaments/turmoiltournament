@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TreeFrog Turmoil Sign Up Form">
+  <title>TreeFrog Turmoil Tournament!</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  
+  <style>
+	:-ms-input-placeholder {  
+		color: gray;  
+	}
+	::-webkit-input-placeholder {
+		color: gray;
+	}
+	body { 
+		background-image: url(https://rawgithub.com/treefrogtournaments/treefrogtournaments.github.io/master/overwatch-logo.png);
+		background-repeat: no-repeat; 
+		background-attachment: fixed;
+		background-position: bottom;
+	}
+  </style>
+</head>
+
+<body>
+  <h2 class="content-head is-center">TreeFrog Turmoil Tournament!</h2>
+  <aside style="background-color:#673ab7">
+       <p>
+           Welcome to the TreeFrog Turmoil Tournament! In This Tournament you will sign up and will be matched with random players according to rank and role.  Check-In is at 7:30 PM EST on Wednesday the 7th, you will have 30 minutes to set up with your team and determine a team captain. Everything will be streamed by the TreeFrogTournaments Twitch. If you have any questions when you get on the Discord server, go to the Treefrog-tournaments text channel and @ either Blue, Freya, or precision and they will respond as soon as they can.
+       </p>
+	   <p style="font-weight: bold;">PLEASE DO YOUR PLACEMENTS BEFORE YOU FILL OUT THE FORM</p>
+   </aside>
+
+<!-- START HERE -->
+   <link rel="stylesheet" href="https://rawgithub.com/treefrogtournaments/treefrogtournaments.github.io/master/pure-min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <!-- Style The Contact Form How Ever You Prefer -->
+   <link rel="stylesheet" href="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/style.css">
+
+  <form id="gform" method="POST" class="pure-form pure-form-stacked"
+  action="https://script.google.com/macros/s/AKfycbxSru2NRah7ZyX-jGLRR4SJ5x54_Taup09d9q8iu88NMzqMm0Y/exec" style="align: center;">
+    <!-- change the form action to your script url -->
+
+    <div >
+      <label for="username">Battletag (include #1234):</label><br>
+      <input id="username" name="username" placeholder="UserName#1234" onblur="checkBattleTag()" oninvalid="this.setCustomValidity('Please Enter Your Battletag')" oninput="this.setCustomValidity('')" required />
+    </div><br>
+
+    <div >
+      <label for="seasonHigh">Season High SR (season 3): </label><br>
+      <input type="text" id="seasonHigh" name="seasonHigh" rows="10" placeholder="Season High" oninvalid="this.setCustomValidity('Please Enter Your Current Season High')"  oninput="this.setCustomValidity('')" required />
+    </div><br>
+
+    <div style="align:left">
+      <label for="role">Role:</label><br>
+      <input style="vertical-align: middle; margin: 0px; " type="radio" id="role" name="role" value="DPS" required /> DPS<br>
+	  <input style="vertical-align: middle; margin: 0px; " type="radio" id="role" name="role" value="Tank" required /> Tank<br>
+	  <input style="vertical-align: middle; margin: 0px; " type="radio" id="role" name="role" value="Support"  required /> Support<br>
+	  <input style="vertical-align: middle; margin: 0px; " type="radio" id="role" name="role" value="Flex" required /> Flex
+    </div><br>
+
+    <div>
+      <label style="color: #673ab7;font-size: 200%;font-weight: bold; ">Discord Invite</label> <a href="https://discord.gg/KWvkrbS"><br>
+	  <img src="http://vignette3.wikia.nocookie.net/dbaddiction/images/d/d0/Discord_logo.png/revision/latest?cb=20160626092847" style="width:150px;height:45px;"></a>
+    </div>
+
+    <button class="button-success pure-button button-xlarge">
+      <i class="fa fa-gamepad"></i>&nbsp;Submit</button>
+
+  </form>
+
+  <!-- Customise the Thankyou Message People See when they submit the form: -->
+  <div style="display:none;" id="thankyou_message">
+    <h2><em>Thanks</em> for contacting us!
+      We will get back to you soon!</h2>
+  </div>
+
+  <!-- Submit the Form to Google Using "AJAX" -->
+  <script data-cfasync="false" type="text/javascript" src="https://rawgithub.com/treefrogtournaments/treefrogtournaments.github.io/master/form-submission-handler.js"></script>
+  <!-- <script data-cfasync="false" type="text/javascript"
+  src="/form-submission-handler.js"></script> -->
+<!-- END -->
+
+</body>
+</html>
